@@ -10,6 +10,6 @@ class TemperatureController extends Controller
     public function index()
     {
         $temperatures = Temperature::orderBy('measured_at', 'desc')->get();
-        return view('temperatures.index', compact('temperatures'));
+        return view('temperatures.dashboard', compact('temperatures'));
     }
 }

@@ -13,11 +13,16 @@ return new class extends Migration
 {
     Schema::create('temperatures', function (Blueprint $table) {
         $table->id();
-        $table->float('value'); // Untuk nilai suhu
+        $table->float('room_temperature'); // Suhu ruangan
+        $table->float('rack_temperature'); // Suhu rak server
+        $table->float('fan_speed_1'); // Kecepatan kipas 1
+        $table->float('fan_speed_2'); // Kecepatan kipas 2
         $table->timestamp('measured_at'); // Waktu pengukuran
         $table->timestamps(); // Created_at & Updated_at
     });
 }
+
+
 
 
     /**
